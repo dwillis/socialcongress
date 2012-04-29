@@ -1,2 +1,3 @@
 venv
-*.pyccelerybeat-schedule
+*.pyc
+celerybeat-schedule.db
