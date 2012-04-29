@@ -1,3 +1,5 @@
 venv
 *.pyc
 celerybeat-schedule.db
+.DS_Store
+tracker/*.pyc

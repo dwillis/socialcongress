@@ -1,0 +1,23 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}Update Social Congress{% endblock %}
+
+{% block content %}
+<h1>Update Social Congress</h1>
+
+<form action="." method="post">{% csrf_token %}
+    <td><input type="submit" value="Refresh Twitter" name="twitter"></td>
+    <td><input type="submit" value="Refresh Facebook" name="facebook"></td>
+</form>
+
+<br />
+
+<h1>CSV Downloads</h1>
+
+{% url admin_weekly_csv 'house' as house_url %}
+{% url admin_weekly_csv 'senate' as senate_url %}
+
+<a href="{{ house_url }}">House Weekly</a><br />
+<a href="{{ senate_url }}">Senate Weekly</a>
+
+{% endblock %}

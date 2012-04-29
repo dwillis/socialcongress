@@ -119,9 +119,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'gunicorn',
     'kombu.transport.django',
-    'djcelery'
+    'djcelery',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
+    'tracker',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
