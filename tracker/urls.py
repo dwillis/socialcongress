@@ -9,7 +9,7 @@ admin.autodiscover()
 handler500 = curry(server_error, template_name='admin/500.html')
 handler404 = curry(page_not_found, template_name='admin/404.html')
 
-urlpatterns = patterns('socialcongress.tracker.views',
+urlpatterns = patterns('tracker.views',
     # Examples:
     # url(r'^$', 'socialcongress.views.home', name='home'),
     url(r'^admin/_update$', 'update', name="update"),

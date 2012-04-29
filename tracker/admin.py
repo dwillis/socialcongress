@@ -1,5 +1,5 @@
 from django.contrib import admin
-from socialcongress.tracker.models import Member, Report, Error
+from tracker.models import Member, Report, Error
 
 class MemberAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("first_name","last_name")}
