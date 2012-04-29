@@ -1,6 +1,4 @@
 Django==1.4
-celery==2.4.0
-django-celery==2.4.0
 gunicorn==0.14.2
 kombu==2.1.7
 psycopg2==2.4.5
