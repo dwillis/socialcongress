@@ -119,6 +119,9 @@ class Report(models.Model):
     def __unicode__(self):
         return self.member.slug
     
+    class Meta:
+        ordering = ['-date']
+    
 class Error(models.Model):
     member = models.ForeignKey(Member)
     date = models.DateField(auto_now=False, auto_now_add=True)
