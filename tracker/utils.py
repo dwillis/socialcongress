@@ -27,6 +27,7 @@ def update_twitter(branch='house', official=True, batch=1):
     results = json.loads(response)
     for result in results:
         if official:
+            print result['screen_name']
             member = Member.objects.get(official_twitter_name__iexact=result['screen_name'])
             report, created = Report.objects.get_or_create(member=member, date=datetime.date.today())
             report.official_twitter_followers=result['followers_count']
