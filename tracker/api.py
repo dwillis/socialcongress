@@ -1,5 +1,6 @@
 from tastypie.resources import ModelResource
 from tracker.models import Member, Report
+from tastypie import fields
 
 class MemberResource(ModelResource):
     class Meta:
