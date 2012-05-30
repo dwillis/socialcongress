@@ -3,6 +3,8 @@ from tracker.models import Member, Report
 from tastypie import fields
 
 class MemberResource(ModelResource):
+    reports = fields.ToManyField(ReportResource, 'reports', full = True)
+    
     class Meta:
         queryset = Member.objects.all()
         resource_name = 'member'
