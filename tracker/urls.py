@@ -27,5 +27,5 @@ urlpatterns = patterns('tracker.views',
     url(r'^admin/', include(admin.site.urls)),
     
     # API urls
-    url(r'^api/', include(member_resource.urls)),
+    url(r'^api/', include(v1_api.urls)),
 )
