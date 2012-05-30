@@ -3,7 +3,7 @@ from tracker.models import Member, Report
 from tastypie import fields
 
 class MemberResource(ModelResource):
-    reports = fields.ToManyField(ReportResource, 'reports', full = True)
+    reports = fields.ToManyField('tracker.api.ReportResource', 'reports', full = True)
     
     class Meta:
         queryset = Member.objects.all()
@@ -12,7 +12,7 @@ class MemberResource(ModelResource):
         allowed_methods = ['get']
 
 class ReportResource(ModelResource):
-    member = fields.ForeignKey(MemberResource, 'member')
+    member = fields.ForeignKey('tracker.api.MemberResource', 'member')
     
     class Meta:
         queryset = Report.objects.all()
