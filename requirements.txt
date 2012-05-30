@@ -5,3 +5,4 @@ psycopg2==2.4.5
 virtualenv==1.6.4
 wsgiref==0.1.2
 simplejson
+django-tastypie

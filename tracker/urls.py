@@ -1,6 +1,12 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.utils.functional import curry
 from django.views.defaults import server_error, page_not_found
+from tracker.api import MemberResource, ReportResource
+from tastypie.api import Api
+
+v1_api = Api(api_name='v1')
+v1_api.register(MemberResource())
+v1_api.register(ReportResource())
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -17,9 +23,9 @@ urlpatterns = patterns('tracker.views',
     url(r'^admin/weekly/chamber/(?P<chamber>[-a-z]+)/$', 'weekly_csv', name='admin_weekly_csv'),
     #url(r'^reports/weeks/$', 'week_index', name='week_index'),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    
+    # API urls
+    url(r'^api/', include(member_resource.urls)),
 )
