@@ -51,6 +51,12 @@ class Member(models.Model):
     def __unicode__(self):
         return self.first_name + ' ' + self.last_name
     
+    def reports(self):
+        try:
+            return self.report_set.order_by('-date')
+        except IndexError:
+            return None        
+    
     def latest_report(self):
         try:
             return self.report_set.order_by('-date')[0]
