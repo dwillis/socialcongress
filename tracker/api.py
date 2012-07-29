@@ -5,6 +5,7 @@ from tastypie import fields
 class MemberResource(ModelResource):
     
     reports = fields.ToManyField('tracker.api.ReportResource', 'report_set')
+    latest_report = fields.ToOneField('tracker.api.ReportResource', 'latest_report')
     
     class Meta:
         queryset = Member.objects.all()
