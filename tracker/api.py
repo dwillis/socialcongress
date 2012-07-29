@@ -13,7 +13,7 @@ class MemberResource(ModelResource):
         allowed_methods = ['get']
 
 class ReportResource(ModelResource):
-    member = fields.ToOneField(MemberResource, 'members')
+    member = fields.ToOneField(MemberResource, 'member')
 
     class Meta:
         queryset = Report.objects.all()
