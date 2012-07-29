@@ -18,3 +18,5 @@ class ReportResource(ModelResource):
     class Meta:
         queryset = Report.objects.all()
         resource_name = 'report'
+        excludes = ['id']
+        allowed_methods = ['get']
