@@ -49,13 +49,7 @@ class Member(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
     
     def __unicode__(self):
-        return self.first_name + ' ' + self.last_name
-    
-    def reports(self):
-        try:
-            return self.report_set.order_by('-date')
-        except IndexError:
-            return None        
+        return self.first_name + ' ' + self.last_name    
     
     def latest_report(self):
         try:

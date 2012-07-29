@@ -5,7 +5,7 @@ from tastypie.cache import SimpleCache
 
 class MemberResource(ModelResource):
     
-    reports = fields.ToManyField('myapp.api.resources.ReportResource', 'reports')
+    reports = fields.ToManyField('tracker.api.resources.ReportResource', 'reports')
     
     class Meta:
         queryset = Member.objects.all()
@@ -19,3 +19,4 @@ class ReportResource(ModelResource):
 
     class Meta:
         queryset = Report.objects.all()
+        resource_name = 'report'
