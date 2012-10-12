@@ -1,5 +1,5 @@
-from celery.task import task
-from tracker.utils import update_twitter, update_facebook
+#from celery.task import task
+#from tracker.utils import update_twitter, update_facebook
 
 @task
 def twitter_task():

@@ -124,7 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'gunicorn',
     'kombu.transport.django',
-    'djcelery',
+#    'djcelery',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'tracker',
@@ -161,5 +161,5 @@ LOGGING = {
     }
 }
 
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+#import dj_database_url
+#DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}

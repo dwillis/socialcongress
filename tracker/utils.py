@@ -55,7 +55,7 @@ def update_facebook(members, token):
             try:
                 body = json.loads(result['body'])
             except:
-                body = json.loads(result['body']) # try again
+                continue
             if body == False:
                 continue
             else:
