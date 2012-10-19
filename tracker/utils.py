@@ -39,7 +39,6 @@ def update_twitter(branch='house', official=True, batch=1):
             report.campaign_twitter_updates=result['statuses_count']
             report.save()
         
-
 def update_facebook(members, token):
     for member in members:
         print member
