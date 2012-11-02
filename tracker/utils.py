@@ -7,6 +7,7 @@ import simplejson as json
 from dateutil.parser import *
 import time
 
+
 def update_twitter(branch='house', official=True, batch=1):
     if official:
         screen_names = [x.official_twitter_name for x in Member.objects.filter(branch=branch, official_twitter_name__isnull=False).order_by('last_name')]
