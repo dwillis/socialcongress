@@ -1,5 +1,6 @@
 Django==1.4
 gunicorn==0.14.2
+gevent==0.13.4
 kombu==2.1.7
 psycopg2==2.4.5
 virtualenv==1.6.4
