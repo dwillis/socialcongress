@@ -17,7 +17,6 @@ def update(request):
             facebook_task.delay()
     return render_to_response('admin/update.html', context_instance=RequestContext(request))
 
-
 def chamber_csv(request, chamber):
     members = Member.objects.filter(branch=chamber).order_by('last_name')
     # Create the HttpResponse object with the appropriate CSV header.
