@@ -3,8 +3,8 @@ import urlparse
 import subprocess
 
 def fetch_facebook_token():
-    FACEBOOK_APP_ID     = '124513124248294'
-    FACEBOOK_APP_SECRET = 'a4705d6f13b98105173ea9ed26118496'
+    FACEBOOK_APP_ID     = 'APP_ID'
+    FACEBOOK_APP_SECRET = 'APP_SECRET'
     # Trying to get an access token. Very awkward.
     oauth_args = dict(client_id     = FACEBOOK_APP_ID,
                       client_secret = FACEBOOK_APP_SECRET,
